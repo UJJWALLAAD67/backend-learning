@@ -12,8 +12,8 @@ export const login = (req, res) => {
   <body >
     <form action=""  style="width:400px; margin: 0 auto; display:flex;flex-direction:column;">
       <input type="text" name="name" />
-      <input type="email" name="eamil" id="email" />
-      <input type="number" name="password" id="password" />
+      <input type="email" name="email" id="email" />
+      <input type="password" name="password" id="password" />
       <button type="submit">${capital}</button>
     </form>
   </body>
@@ -32,10 +32,10 @@ export const register = (req, res) => {
     <title>Document</title>
   </head>
   <body>
-    <form action="">
+    <form action="" style="width:400px; margin: 0 auto; display:flex;flex-direction:column;">
       <input type="text" name="name" />
-      <input type="email" name="eamil" id="email" />
-      <input type="number" name="password" id="password" />
+      <input type="email" name="email" id="email" />
+      <input type="password" name="password" id="password" />
       <button type="submit">${capital}</button>
     </form>
   </body>
