@@ -2,7 +2,7 @@ export const login = (req, res) => {
   const button = req.url.slice(1, req.url.length);
   const capital = button.toUpperCase();
 
-  res.send(`<!DOCTYPE html>
+  res.render(`<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -24,7 +24,7 @@ export const register = (req, res) => {
   const button = req.url.slice(1, req.url.length);
   const capital = button.toUpperCase();
 
-  res.send(`<!DOCTYPE html>
+  res.render(`<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

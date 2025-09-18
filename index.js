@@ -4,13 +4,16 @@ import router from "./route.js";
 const app = express();
 
 const PORT = 3000;
+
+app.set('view engine', 'ejs');
+
+
 app.use(express.json()); //register middleware functions app.use()
 
-app.use((req,res,next)=>{
+app.use((req, res, next) => {
   console.log(new Date().toLocaleTimeString());
   next();
-   
-})
+});
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
@@ -67,9 +70,11 @@ app.get("/users/things/:name/:id", (req, res) => {
   });
 });
 
-app.get( (req, res) => {
-  res.status(404).send("Error: Page Not Found");
+app.use((req, res) => {
+  const url = req.url;
+  res.status(404).send(`Error: ${url} Not Found`);
 });
+
 
 
 app.listen(PORT, () => {
